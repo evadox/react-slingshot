@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:13.8.0
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - run: npm i
@@ -21,8 +21,7 @@ jobs:
     steps:
       - checkout
       - run: npm audit
-      - run: npm set audit false      
-    
+
 
 workflows:
   my_workflow:
