@@ -15,13 +15,13 @@ jobs:
       - checkout
       - run: npm i
       - run: npm run test
-  analyze:
-    docker:
-      - image: cimg/node:18.4.0
-    steps:
-      - checkout
-      - run: npm audit
-      - run: npm audit fix --force
+  # analyze:
+  #   docker:
+  #     - image: cimg/node:18.4.0
+  #   steps:
+  #     - checkout
+  #     - run: npm audit
+  #     - run: npm audit fix --force
 
 
 workflows:
