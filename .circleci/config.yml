@@ -20,14 +20,8 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm audit fix --force
       - run: npm audit
-      - run: npm update mkdirp --depth
-      - run: npm update @babel/register
-      - run: npm update minimist
-      - run: npm update postcss
-      - run: npm update ansi-regex
-      - run: npm audit      
+      - run: npm set audit false      
     
 
 workflows:
